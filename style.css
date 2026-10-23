@@ -75,6 +75,21 @@ nav ul li a:hover {
     margin: 0;
 }
 
+.about-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 32px;
+    background-color: #C2D4DD;
+    border: 2px solid black;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.about-wrapper {
+    padding: 32px;
+    background-color: white;
+}
+
 .events-section {
     min-height: 400px;
     background-image: url("night_out.PNG");
@@ -151,6 +166,13 @@ nav ul li a:hover {
     margin: 0;
 }
 
+.pastevents-cards {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    padding: 24px;
+}
+
 .contactus-section {
     min-height: 400px;
     background-image: url("striped.PNG");
@@ -169,6 +191,62 @@ nav ul li a:hover {
 
 .contactus-section h1 {
     margin: 0;
+}
+
+.contactus-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contactus-form label {
+    font-weight: bold;
+}
+
+.contactus-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactus-form button {
+    padding: 10px;
+    background-color: #0C5678;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contactus-form button:hover {
+    background-color: #333;
+}
+
+.contactus-form input,
+.contactus-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-input {
+    min-height: 180px;
+    resize: vertical;
+    margin-bottom: 10px;
+}
+
+.success-message {
+    display: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: green;
+    font-weight: bold;  
 }
 
 .collapsible-section {
@@ -212,16 +290,17 @@ button {
 
 .card {
     text-align: center;
-    border: 1px solid #ccc;
+    border: 2px solid black;
     border-radius: 10px;
+    overflow: hidden;
 }
 
 .card img {
     width: 100%;
     height: 220px;
     object-fit: cover;
-    border: 1px solid #ccc;
-    border-radius: 10px;
+    display: block;
+    border: 0;
 }
 
 h4 {
@@ -276,5 +355,15 @@ footer {
     .card-container {
         flex-direction: column;
         align-items: center;
+    }
+
+    .pastevents-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .pastevents-cards {
+        grid-template-columns: 1fr;
     }
 }

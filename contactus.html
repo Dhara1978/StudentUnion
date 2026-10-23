@@ -23,6 +23,20 @@
         <h1>Contact Us</h1>
     </section>
 
+    <section class="contactus-form">
+        <form id="myForm">
+            <label for="subject">Subject:</label><br>
+            <input type="text" id="subject" name="subject"><br>
+            <label for="querytext">Query:</label><br>
+            <textarea class="form-input" id="querytext" name="querytext" rows="6"></textarea>
+            <button type="submit">Submit</button>
+        </form>    
+        <!-- Message displayed on successful submission -->
+        <div class="success-message" id="successMessage">
+            Thank you! Your form has been submitted successfully.
+        </div>      
+    </section>
+
     <footer>
       <!--icons by Icons8-->
       <div>
@@ -32,6 +46,6 @@
       </div>
       <p>&copy; 2026 The Student Union. All rights reserved.</p>
     </footer>
-    <script src="index.js"></script>
+    <script src="contactus.js"></script>
   </body>
 </html>
